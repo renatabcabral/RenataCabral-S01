@@ -2,28 +2,27 @@ package main
 
 import "fmt"
 
-func loginCorreto(u, s string) bool {
-	if u == "senha" && s == "admin" {
+func loginValido(user, pass string) bool {
+	if user == "senha" && pass == "admin" {
 		return true
 	}
 	return false
 }
 
 func main() {
-	var usuario, senha string
+	var nomeUsuario, senhaUsuario string
 
 	for tentativa := 1; ; tentativa++ {
 		fmt.Print("Usuário: ")
-		fmt.Scan(&usuario)
+		fmt.Scan(&nomeUsuario)
 
 		fmt.Print("Senha: ")
-		fmt.Scan(&senha)
+		fmt.Scan(&senhaUsuario)
 
-		switch loginCorreto(usuario, senha) {
-		case true:
+		if loginValido(nomeUsuario, senhaUsuario) {
 			fmt.Println("Login bem-sucedido!")
-			return
-		default:
+			break
+		} else {
 			fmt.Println("Usuário ou senha incorretos. Tente novamente.")
 		}
 	}
