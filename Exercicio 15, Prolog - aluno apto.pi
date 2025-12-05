@@ -1,0 +1,13 @@
+aluno_apto(joao, Disciplina).
+
+Disciplina = algoritmos ;
+Disciplina = banco_dados ;
+Disciplina = sistemas_operacionais ;
+Disciplina = teoria_grafos ;
+Disciplina = estatistica ;
+Disciplina = redes.
+
+aluno_apto(maria, inteligencia_artificial).
+false.
+
+
